@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>F&amp;C Soluciones Integrales — Brochure Corporativo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --navy: #0F3B4C;
+  --navy-2: #143f52;
+  --navy-deep: #0a2a37;
+  --green: #2C8B6F;
+  --green-deep: #1f6b56;
+  --green-soft: #7ec9b0;
+  --cream: #F6F2EA;
+  --cream-2: #EFE9DC;
+  --ink: #14171A;
+  --muted: #5B6670;
+  --line: #d9d3c5;
+  --amber: #D4913A;
+}
+@page { size: A4 landscape; margin: 0; }
+html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+body {
+  font-family: 'Inter', sans-serif;
+  background: #e8e4da;
+  color: var(--ink);
+  line-height: 1.5;
+}
+.page {
+  width: 297mm;
+  height: 210mm;
+  background: var(--cream);
+  position: relative;
+  overflow: hidden;
+  page-break-after: always;
+  break-after: page;
+}
+.page:last-child { page-break-after: auto; break-after: auto; }
+/* On-screen preview: frame each page */
+@media screen {
+  .page { margin: 12px auto; box-shadow: 0 10px 40px rgba(10,42,55,0.25); }
+}
+.icont {
+  position: absolute;
+  z-index: 0;
+}
+/* ---------- Shared ---------- */
+.f-serif { font-family: 'Fraunces', serif; }
+.eyebrow {
+  display: inline-flex; align-items: center; gap: 10px;
+  font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase;
+  font-weight: 600; color: var(--green-deep);
+}
+.eyebrow::before { content: ''; width: 20px; height: 1px; background: var(--green-deep); }
+.page-head {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 18px 40px;
+  border-bottom: 1px solid var(--line);
+  background: var(--cream);
+}
+.page-head .brand {
+  display: flex; align-items: center; gap: 10px;
+}
+.page-head .brand img { width: 30px; height: 30px; object-fit: contain; }
+.page-head .brand-name { font-family: 'Fraunces', serif; font-size: 15px; font-weight: 600; color: var(--navy); }
+.page-head .brand-sub { font-size: 8.5px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); }
+.page-head .pg-num { font-size: 10px; letter-spacing: 0.2em; color: var(--muted); font-weight: 600; }
+.foot {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 12px 40px; font-size: 9px; color: var(--muted);
+  border-top: 1px solid var(--line);
+  background: var(--cream);
+}
+.foot strong { color: var(--navy); font-weight: 600; }
+
+/* ---------- PAGE 1 : PORTADA ---------- */
+.p1 .hero-bg {
+  position: absolute; inset: 0; z-index: 0;
+  background-image: url('Imagenes/hero-colombia.jpg');
+  background-size: cover; background-position: center;
+  filter: saturate(0.7) brightness(0.75);
+}
+.p1 .hero-bg::after {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(100deg, rgba(10,42,55,0.88) 0%, rgba(10,42,55,0.62) 55%, rgba(10,42,55,0.35) 100%);
+}
+.p1 .content {
+  position: relative; z-index: 1;
+  padding: 30px 46px 64px;
+  height: 100%;
+  display: flex; flex-direction: column;
+}
+.p1 .brand-row {
+  display: flex; justify-content: space-between; align-items: center;
+}
+.p1 .brand-row .left { display: flex; align-items: center; gap: 12px; }
+.p1 .brand-row img { width: 44px; height: 44px; object-fit: contain; background: #fff; border-radius: 6px; padding: 4px; }
+.p1 .brand-name { font-family: 'Fraunces', serif; font-size: 20px; color: var(--cream); font-weight: 600; }
+.p1 .brand-sub { font-size: 9px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--green-soft); }
+.p1 .since { font-size: 9.5px; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(246,242,234,0.65); font-weight: 600; }
+.p1 h1 {
+  font-family: 'Fraunces', serif; font-weight: 500;
+  font-size: 48px; line-height: 0.98; letter-spacing: -0.02em;
+  color: var(--cream);
+  margin-top: 20px;
+  text-wrap: balance;
+}
+.p1 h1 em { font-style: italic; font-weight: 400; color: var(--green-soft); }
+.p1 .lead {
+  margin-top: 12px; max-width: 560px;
+  font-size: 14px; line-height: 1.55; color: rgba(246,242,234,0.85);
+}
+.p1 .promise {
+  margin: 44px auto 0;
+  max-width: 680px;
+  padding: 18px 24px; background: rgba(15,59,76,0.72);
+  border-left: 4px solid var(--green); backdrop-filter: blur(4px);
+  font-size: 13px; line-height: 1.5; color: var(--cream);
+}
+.p1 .promise strong {
+  font-family: 'Fraunces', serif;
+  font-size: 15px; font-weight: 600; color: var(--green-soft);
+  display: block; margin-bottom: 4px;
+}
+.p1 .stats {
+  margin-top: auto;
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 0;
+  border: 1px solid rgba(246,242,234,0.2);
+  background: rgba(10,42,55,0.45);
+}
+.p1 .stat { padding: 10px 14px; border-right: 1px solid rgba(246,242,234,0.15); }
+.p1 .stat:last-child { border-right: none; }
+.p1 .stat .n { font-family: 'Fraunces', serif; font-size: 26px; line-height: 1; color: var(--green-soft); font-weight: 500; }
+.p1 .stat .l { font-size: 8px; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(246,242,234,0.7); margin-top: 6px; }
+
+/* ---------- PAGE 2 : SERVICIOS ---------- */
+.p2 .content { padding: 26px 40px 34px; position: relative; z-index: 1; height: 100%; }
+.p2 .sec-title { font-family: 'Fraunces', serif; font-size: 30px; font-weight: 500; color: var(--navy); letter-spacing: -0.015em; margin-top: 6px; }
+.p2 .sec-title em { font-style: italic; color: var(--green-deep); font-weight: 400; }
+.p2 .grid { margin-top: 20px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
+.p2 .svc { padding: 16px 16px 18px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); background: var(--white, #fff); }
+.p2 .svc .num { font-family: 'Fraunces', serif; font-size: 11px; color: var(--green-deep); font-weight: 600; letter-spacing: 0.06em; margin-bottom: 6px; }
+.p2 .svc h3 { font-family: 'Fraunces', serif; font-size: 14.5px; font-weight: 500; color: var(--navy); line-height: 1.15; margin-bottom: 6px; }
+.p2 .svc p { font-size: 9.5px; color: var(--muted); line-height: 1.5; }
+.p2 .svc .tags { margin-top: 8px; display: flex; flex-wrap: wrap; gap: 4px; }
+.p2 .svc .tag { font-size: 7.5px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); padding: 2px 6px; background: var(--cream-2); border-radius: 2px; font-weight: 600; }
+.p2 .method + .method { margin-top: 0; }
+.p2 .method {
+  margin-top: 14px; padding: 10px 14px; background: var(--cream-2);
+  border-left: 3px solid var(--navy); font-size: 9.5px; color: var(--muted); line-height: 1.55;
+}
+.p2 .method strong { color: var(--navy); }
+
+/* ---------- PAGE 3 : EQUIPO + EXPERIENCIA ---------- */
+.p3 .content { padding: 24px 40px 30px; position: relative; z-index: 1; height: 100%; }
+.p3 .sec-title { font-family: 'Fraunces', serif; font-size: 28px; font-weight: 500; color: var(--navy); letter-spacing: -0.015em; margin-top: 6px; }
+.p3 .sec-title em { font-style: italic; color: var(--green-deep); font-weight: 400; }
+.p3 .cols { display: grid; grid-template-columns: 1.15fr 1fr; gap: 26px; margin-top: 16px; }
+.p3 .team-list { border-top: 1px solid var(--line); }
+.p3 .tmember { display: grid; grid-template-columns: 74px 1fr; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--line); align-items: start; }
+.p3 .tphoto { width: 70px; height: 70px; border-radius: 50%; object-fit: cover; border: 2px solid var(--cream-2); background: var(--navy); }
+.p3 .tinit { width: 70px; height: 70px; border-radius: 50%; background: var(--navy); color: var(--cream); display: flex; align-items: center; justify-content: center; font-family: 'Fraunces', serif; font-size: 22px; font-weight: 500; border: 2px solid var(--cream-2); }
+.p3 .tname { font-family: 'Fraunces', serif; font-size: 13.5px; font-weight: 600; color: var(--navy); line-height: 1.15; }
+.p3 .trole { font-size: 7.5px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--green-deep); font-weight: 600; margin: 3px 0 4px; }
+.p3 .tdesc { font-size: 8.8px; color: var(--muted); line-height: 1.5; }
+.p3 .exp-table { border-top: 1px solid var(--line-strong); border-bottom: 1px solid var(--line-strong); }
+.p3 .exp-row { display: grid; grid-template-columns: 46px 1fr 130px 74px; gap: 12px; padding: 8.5px 0; border-bottom: 1px solid var(--line); align-items: baseline; }
+.p3 .exp-row:last-child { border-bottom: none; }
+.p3 .exp-year { font-family: 'Fraunces', serif; font-size: 15px; color: var(--green-deep); font-weight: 500; }
+.p3 .exp-title { font-size: 9.5px; color: var(--ink); font-weight: 500; line-height: 1.35; }
+.p3 .exp-title small { display: block; font-size: 8px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; font-weight: 500; margin-top: 2px; }
+.p3 .exp-type { font-size: 8px; color: var(--muted); }
+.p3 .exp-val { font-family: 'Fraunces', serif; font-size: 11.5px; color: var(--navy); font-weight: 500; text-align: right; }
+.p3 .why { margin-top: 12px; padding: 10px 13px; background: var(--navy); color: var(--cream); }
+.p3 .why strong { color: var(--green-soft); }
+.p3 .why p { font-size: 8.8px; line-height: 1.5; color: rgba(246,242,234,0.85); margin-top: 4px; }
+
+/* ---------- PAGE 4 : CLIENTES + CONTACTO ---------- */
+.p4 .content { padding: 26px 40px 30px; position: relative; z-index: 1; height: 100%; }
+.p4 .sec-title { font-family: 'Fraunces', serif; font-size: 28px; font-weight: 500; color: var(--navy); letter-spacing: -0.015em; margin-top: 6px; }
+.p4 .sec-title em { font-style: italic; color: var(--green-deep); font-weight: 400; }
+.p4 .logo-wall { display: grid; grid-template-columns: repeat(5, 1fr); border-top: 1px solid var(--line); border-left: 1px solid var(--line); margin-top: 16px; background: #fff; }
+.p4 .logo-cell { border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); aspect-ratio: 1/0.52; display: flex; align-items: center; justify-content: center; padding: 12px; }
+.p4 .logo-cell img { max-width: 88%; max-height: 74%; object-fit: contain; filter: grayscale(0.2) contrast(0.95); }
+.p4 .quote {
+  margin-top: 14px; padding: 12px 16px; border-left: 3px solid var(--green);
+  background: var(--cream-2); font-size: 10.5px; color: var(--muted); font-style: italic; line-height: 1.55;
+}
+.p4 .contact-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 16px; border-top: 1px solid var(--line); padding-top: 16px; }
+.p4 .cbl { font-size: 8px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--green-deep); font-weight: 600; margin-bottom: 6px; }
+.p4 .cbv { font-family: 'Fraunces', serif; font-size: 13.5px; font-weight: 500; color: var(--navy); line-height: 1.35; }
+.p4 .cbs { font-size: 9px; color: var(--muted); margin-top: 3px; line-height: 1.5; }
+.p4 .credits { margin-top: 14px; padding-top: 10px; border-top: 1px dashed var(--line); font-size: 8.5px; color: var(--muted); line-height: 1.55; }
+</style>
+</head>
+<body>
+
+<!-- ============ PÁGINA 1 · PORTADA ============ -->
+<section class="page p1">
+  <div class="hero-bg"></div>
+  <div class="content">
+    <div class="brand-row">
+      <div class="left">
+        <img src="Imagenes/logo.png" alt="F&amp;C">
+        <div>
+          <div class="brand-name">F&amp;C Soluciones Integrales</div>
+          <div class="brand-sub">Fierro &amp; Consultores SAS · Gestión pública y privada</div>
+        </div>
+      </div>
+      <div class="since">Soluciones Integrales · Desde 2010</div>
+    </div>
+
+    <h1>Consultoría estratégica en <em>gestión pública</em> y privada.</h1>
+    <p class="lead">Acompañamos a entidades territoriales, organismos multilaterales, fundaciones y empresas en todo el ciclo de la inversión pública: planeación, formulación, gestión de recursos y ejecución, con estándares de cooperación internacional.</p>
+
+    <div class="promise">
+      <strong>Promesa de valor:</strong> Cerramos la brecha entre la planeación y la ejecución. Convertimos diagnósticos en proyectos viables, proyectos en contratos ejecutados y contratos en resultados verificables para el territorio, combinando rigor técnico, conocimiento del marco normativo colombiano y metodologías propias.
+    </div>
+
+    <div class="stats">
+      <div class="stat"><div class="n">15+</div><div class="l">Años de trayectoria</div></div>
+      <div class="stat"><div class="n">47</div><div class="l">Contratos ejecutados</div></div>
+      <div class="stat"><div class="n">$7.400M</div><div class="l">Valor acreditado en RUP</div></div>
+      <div class="stat"><div class="n">40</div><div class="l">Códigos UNSPSC</div></div>
+    </div>
+  </div>
+  <div class="foot">
+    <span><strong>F&amp;C Soluciones Integrales</strong> · NIT 900.383.488-8</span>
+    <span>Brochure corporativo · 2026</span>
+  </div>
+</section>
+<!-- ============ PÁGINA 2 · SERVICIOS ============ -->
+<section class="page p2">
+  <div class="page-head">
+    <div class="brand">
+      <img src="Imagenes/logo.png" alt="F&amp;C">
+      <div>
+        <div class="brand-name">F&amp;C Soluciones Integrales</div>
+        <div class="brand-sub">NIT 900.383.488-8</div>
+      </div>
+    </div>
+    <div class="pg-num">02 · SERVICIOS</div>
+  </div>
+  <div class="content">
+    <div class="eyebrow">Qué hacemos</div>
+    <h2 class="sec-title">Servicios de <em>consultoría integral</em>.</h2>
+    <div class="grid">
+      <div class="svc">
+        <div class="num">/ 01</div>
+        <h3>Planeación territorial y planes de desarrollo</h3>
+        <p>Formulación, ajuste y evaluación de Planes de Desarrollo Municipal y Departamental, articulación de instrumentos de planeación, diagnósticos integrales y componentes estratégico y financiero.</p>
+        <div class="tags"><span class="tag">PDM</span><span class="tag">POT</span><span class="tag">Rendición de cuentas</span></div>
+      </div>
+      <div class="svc">
+        <div class="num">/ 02</div>
+        <h3>Formulación y evaluación de proyectos</h3>
+        <p>Estructuración de proyectos de inversión pública bajo MGA y SGR, evaluación ex-ante y ex-post, viabilización técnica-financiera y acompañamiento en todo el ciclo del proyecto.</p>
+        <div class="tags"><span class="tag">MGA</span><span class="tag">SGR</span><span class="tag">Regalías</span></div>
+      </div>
+      <div class="svc">
+        <div class="num">/ 03</div>
+        <h3>Fortalecimiento institucional</h3>
+        <p>Bancos de programas y proyectos, capacitación a funcionarios, actualización de estatutos orgánicos de presupuesto y fortalecimiento de secretarías de hacienda y planeación.</p>
+        <div class="tags"><span class="tag">Bancos de proyectos</span><span class="tag">Capacitación</span></div>
+      </div>
+      <div class="svc">
+        <div class="num">/ 04</div>
+        <h3>Interventoría técnica y administrativa</h3>
+        <p>Interventoría técnica, administrativa, jurídica, ambiental y financiera sobre contratos de obra e infraestructura pública: centros de salud, parques, edificaciones y vías rurales.</p>
+        <div class="tags"><span class="tag">Obra pública</span><span class="tag">Supervisión</span></div>
+      </div>
+      <div class="svc">
+        <div class="num">/ 05</div>
+        <h3>Estudios de mercado, financieros y económicos</h3>
+        <p>Estudios de prefactibilidad y factibilidad, perfiles de proyecto para el sector energético y agroindustrial, modelos financieros y análisis económico regional.</p>
+        <div class="tags"><span class="tag">Prefactibilidad</span><span class="tag">Modelación</span></div>
+      </div>
+      <div class="svc">
+        <div class="num">/ 06</div>
+        <h3>Obra civil e infraestructura</h3>
+        <p>Ejecución de obras públicas: mejoramiento de parques, placa huella rural, puestos de salud y obras civiles complementarias, mediante uniones temporales y consorcios.</p>
+        <div class="tags"><span class="tag">Vías rurales</span><span class="tag">Espacio público</span></div>
+      </div>
+    </div>
+    <div class="method">
+      <strong>Metodología:</strong> diagnóstico territorial participativo · hoja de ruta estratégica · formulación bajo estándares MGA / SGR y cooperación internacional · acompañamiento hasta la ejecución y liquidación. Cada etapa con entregables verificables y transferencia de conocimiento a los equipos locales.
+    </div>
+  </div>
+  <div class="foot">
+    <span><strong>F&amp;C Soluciones Integrales</strong> · Villavicencio · Bogotá</span>
+    <span>Brochure corporativo · 2026</span>
+  </div>
+</section>
+<!-- ============ PÁGINA 3 · EQUIPO + EXPERIENCIA ============ -->
+<section class="page p3">
+  <div class="page-head">
+    <div class="brand">
+      <img src="Imagenes/logo.png" alt="F&amp;C">
+      <div>
+        <div class="brand-name">F&amp;C Soluciones Integrales</div>
+        <div class="brand-sub">NIT 900.383.488-8</div>
+      </div>
+    </div>
+    <div class="pg-num">03 · EQUIPO Y EXPERIENCIA</div>
+  </div>
+  <div class="content">
+    <div class="eyebrow">Quiénes somos</div>
+    <h2 class="sec-title">Equipo <em>multidisciplinario</em> y trayectoria acreditada.</h2>
+    <div class="cols">
+      <div>
+        <div class="team-list">
+          <div class="tmember">
+            <img class="tphoto" src="Imagenes/Jose Fierro medio cuerpo.jpg" alt="José Gregorio Fierro Clavijo">
+            <div>
+              <div class="tname">José Gregorio Fierro Clavijo</div>
+              <div class="trole">Cooperación internacional</div>
+              <div class="tdesc">Experiencia con USAID, IFC · Banco Mundial, DNP y BID. Especialista en planeación estratégica, formulación de proyectos y bioeconomía. +15 años movilizando USD 330M en 200+ municipios.</div>
+            </div>
+          </div>
+          <div class="tmember">
+            <img class="tphoto" src="Imagenes/Perfil Linkedln.jpg.jpeg" alt="William Germán Blanco Rodríguez">
+            <div>
+              <div class="tname">William Germán Blanco Rodríguez</div>
+              <div class="trole">Políticas públicas · IA</div>
+              <div class="tdesc">Economista con experiencia en DNP, BID y MSI-DAI-USAID. Diseño, formulación y evaluación de políticas públicas, articulando datos, IA y planificación estratégica presupuestal.</div>
+            </div>
+          </div>
+          <div class="tmember">
+            <img class="tphoto" src="Imagenes/Monica Ma Orozco.jpeg" alt="Mónica María Orozco Sierra">
+            <div>
+              <div class="tname">Mónica María Orozco Sierra</div>
+              <div class="trole">Finanzas públicas</div>
+              <div class="tdesc">Economista, Magíster en Gobierno y Políticas Públicas, Especialista en Finanzas Públicas. +20 años liderando fortalecimiento institucional en más de 300 municipios. Experiencia con DNP, USAID, MinInterior, AMB y CAR Cundinamarca.</div>
+            </div>
+          </div>
+          <div class="tmember">
+            <img class="tphoto" src="Imagenes/Nini Johanna Mendez Niño.jpeg" alt="Nini Johanna Méndez Niño">
+            <div>
+              <div class="tname">Nini Johanna Méndez Niño</div>
+              <div class="trole">Inversión pública</div>
+              <div class="tdesc">Experta en inversión pública, movilización de recursos y metodologías participativas. Experiencia con USAID, PNUD, BID, British Council y banca. Incorpora innovación y gamificación para la apropiación ciudadana.</div>
+            </div>
+          </div>
+          <div class="tmember">
+            <img class="tphoto" src="Imagenes/sandra.jpg" alt="Sandra Pinzón Ortiz">
+            <div>
+              <div class="tname">Sandra Pinzón Ortiz</div>
+              <div class="trole">Gobernanza y DDHH</div>
+              <div class="tdesc">Experta en gobernabilidad, derechos humanos y paz territorial. Magíster en Gobierno y Políticas Públicas. +25 años desde Vicepresidencia de Colombia y programas USAID en fortalecimiento institucional y articulación Nación–Territorio.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="exp-table">
+          <div class="exp-row">
+            <div class="exp-year">2016</div>
+            <div class="exp-title">Evaluación de proyectos post-implementación IFC en 100 municipios<small>IFC · World Bank Group</small></div>
+            <div class="exp-type">Evaluación · Nacional</div>
+            <div class="exp-val">$248 M</div>
+          </div>
+          <div class="exp-row">
+            <div class="exp-year">2018</div>
+            <div class="exp-title">Mejoramiento y adecuación de parques públicos<small>Alcaldía de Villapinzón</small></div>
+            <div class="exp-type">Obra civil</div>
+            <div class="exp-val">$1.926 M</div>
+          </div>
+          <div class="exp-row">
+            <div class="exp-year">2013</div>
+            <div class="exp-title">Banco de proyectos en 12 municipios y formación a funcionarios e indígenas<small>Gobernación del Meta</small></div>
+            <div class="exp-type">Fortalecimiento</div>
+            <div class="exp-val">$590 M</div>
+          </div>
+          <div class="exp-row">
+            <div class="exp-year">2015</div>
+            <div class="exp-title">Lineamientos para empalme y planes de desarrollo · primera infancia<small>Fundación Plan</small></div>
+            <div class="exp-type">Política pública</div>
+            <div class="exp-val">$445 M</div>
+          </div>
+          <div class="exp-row">
+            <div class="exp-year">2013</div>
+            <div class="exp-title">Asistencia técnica en los 29 municipios del Meta<small>Gobernación del Meta</small></div>
+            <div class="exp-type">Fortalecimiento</div>
+            <div class="exp-val">$450 M</div>
+          </div>
+          <div class="exp-row">
+            <div class="exp-year">2013</div>
+            <div class="exp-title">Estudio de mercado para planta transformadora de aceites lubricantes<small>Empresas de Petróleos del Llano</small></div>
+            <div class="exp-type">Estudios</div>
+            <div class="exp-val">$360 M</div>
+          </div>
+        </div>
+        <div class="why">
+          <strong>Por qué F&amp;C:</strong>
+          <p>Trayectoria acreditada en el RUP · solvencia financiera sin endeudamiento · alianzas con multilaterales (IFC, PNUD, Plan) · cobertura en 7+ departamentos y Centroamérica · enfoque multidisciplinario · compromiso con el territorio.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="foot">
+    <span><strong>F&amp;C Soluciones Integrales</strong> · Villavicencio · Bogotá</span>
+    <span>Brochure corporativo · 2026</span>
+  </div>
+</section>
+<!-- ============ PÁGINA 4 · CLIENTES + CONTACTO ============ -->
+<section class="page p4">
+  <div class="page-head">
+    <div class="brand">
+      <img src="Imagenes/logo.png" alt="F&amp;C">
+      <div>
+        <div class="brand-name">F&amp;C Soluciones Integrales</div>
+        <div class="brand-sub">NIT 900.383.488-8</div>
+      </div>
+    </div>
+    <div class="pg-num">04 · CLIENTES Y CONTACTO</div>
+  </div>
+  <div class="content">
+    <div class="eyebrow">Quiénes confían en nosotros</div>
+    <h2 class="sec-title">Clientes con <em>estándar internacional</em>.</h2>
+
+    <div class="logo-wall">
+      <div class="logo-cell"><img src="Imagenes/logos/meta.png" alt="Gobernación del Meta"></div>
+      <div class="logo-cell"><img src="Imagenes/logos/ifc.png" alt="IFC · World Bank Group"></div>
+      <div class="logo-cell"><img src="Imagenes/logos/pnud.svg" alt="PNUD Colombia"></div>
+      <div class="logo-cell"><img src="Imagenes/logos/usaid.svg" alt="USAID"></div>
+      <div class="logo-cell"><img src="Imagenes/logos/plan-international.svg" alt="Fundación Plan Internacional"></div>
+      <div class="logo-cell"><img src="Imagenes/logos/bid.png" alt="BID"></div>
+      <div class="logo-cell"><img src="Imagenes/logos/dnp.png" alt="DNP"></div>
+      <div class="logo-cell"><img src="Imagenes/logos/worldbank.png" alt="Banco Mundial"></div>
+      <div class="logo-cell"><img src="Imagenes/logos/oim.png" alt="OIM Colombia"></div>
+      <div class="logo-cell"><img src="Imagenes/logos/ecopetrol.png" alt="Fundación Ecopetrol · Fundesmag"></div>
+    </div>
+
+    <div class="quote">
+      "Hemos ejecutado 47 contratos con entidades territoriales, organismos multilaterales y fundaciones — desde diagnósticos municipales hasta obras de infraestructura por más de $1.900 millones. Nuestra experiencia está acreditada en el RUP con 40 códigos UNSPSC y cobertura en 7+ departamentos y Centroamérica."
+    </div>
+
+    <div class="contact-grid">
+      <div>
+        <div class="cbl">Correo electrónico</div>
+        <div class="cbv">gerencia@fcsolucionesintegrales.com</div>
+        <div class="cbs">Gerencia general · Cotizaciones y propuestas</div>
+      </div>
+      <div>
+        <div class="cbl">Teléfonos</div>
+        <div class="cbv">315 236 9917 · 310 257 4249</div>
+        <div class="cbs">Lunes a viernes · 8:00 a 17:00 hrs.</div>
+      </div>
+      <div>
+        <div class="cbl">Sedes</div>
+        <div class="cbv">Villavicencio · Bogotá D.C.</div>
+        <div class="cbs">WTC Calle 100 · Oficina Primavera Urbana<br>NIT 900.383.488-8 · Representante legal: Lorena Lozano Rondón</div>
+      </div>
+    </div>
+
+    <div class="credits">
+      <strong>F&amp;C Soluciones Integrales</strong> (Fierro &amp; Consultores SAS) · Constituida el 17 de septiembre de 2010 · Cámara de Comercio de Villavicencio · RUP vigente 2026 · CIIU 8412 (Administración pública) y 7020 (Consultoría de gestión). Los datos de trayectoria, contratos y valores corresponden a la información acreditada ante el Registro Único de Proponentes.
+    </div>
+  </div>
+  <div class="foot">
+    <span><strong>F&amp;C Soluciones Integrales</strong> · gerencia@fcsolucionesintegrales.com · 315 236 9917</span>
+    <span>Brochure corporativo · 2026</span>
+  </div>
+</section>
+</body>
+</html>
